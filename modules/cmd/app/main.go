@@ -9,6 +9,7 @@ import (
 
 func main() {
 	log := logger.New("app")
+	log.SetPrefix("app")
 
 	hello := usecase.NewHello()
 	log.Info("%s", hello.Say())

@@ -36,3 +36,11 @@ go.work.sum
 
 # allow Go workspace file in this repo
 !go.work
+
+# Go build outputs (local)
+#/modules/bin/   # уже есть
+/modules/app
+/modules/*.exe
+/modules/*.out
+/modules/*.test
+

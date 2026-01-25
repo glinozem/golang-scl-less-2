@@ -27,3 +27,7 @@ func (l Logger) Error(format string, args ...any) {
 	msg := fmt.Sprintf(format, args...)
 	color.New(color.FgRed).Fprintf(os.Stderr, "%s [%s] ERROR %s\n", ts, l.prefix, msg)
 }
+
+func (l *Logger) SetPrefix(prefix string) {
+	l.prefix = prefix
+}
