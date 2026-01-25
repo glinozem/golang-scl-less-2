@@ -33,3 +33,6 @@ go.work.sum
 
 # build artifacts
 /modules/bin/
+
+# allow Go workspace file in this repo
+!go.work
