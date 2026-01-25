@@ -1,16 +1,17 @@
 package main
 
 import (
-	"github.com/fatih/color"
 	"github.com/glinozem/golang-scl-less-2/modules/internal/usecase"
+	"github.com/glinozem/golang-scl-less-2/modules/pkg/logger"
 	"github.com/google/uuid"
 	_ "go.uber.org/automaxprocs"
 )
 
 func main() {
-	hello := usecase.NewHello()
-	color.Green(hello.Say())
-	color.Cyan("UUID: %s", uuid.New().String())
+	log := logger.New("app")
 
-	//fmt.Println("UUID:", uuid.New().String())
+	hello := usecase.NewHello()
+	log.Info("%s", hello.Say())
+
+	log.Info("UUID: %s", uuid.New().String())
 }
